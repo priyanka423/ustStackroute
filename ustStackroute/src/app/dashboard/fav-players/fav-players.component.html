@@ -1,0 +1,16 @@
+<div class="row main-diiv">
+    <div class="col-md-3 col-lg-3 col-xs-12 mt-3">
+        <h1 class="fav-h1"> Your Favrourit Player's List</h1>
+        <span *ngIf="!ifFavEmpty">
+        <ul *ngFor="let player of favPlayerss" class='player-stat-main' >
+            <li><i class="fa fa-heart trash-class pull-right" (click)='removeFav(player.playerId)'></i></li>
+            <li> <img src="{{player.playerImage}}" class="player-img" /></li>
+            <li class="player-id">Player's pid: {{player.playerId}}</li>
+            <li>
+                <h2>{{player.playerName}}</h2>
+            </li>
+        </ul>
+    </span>
+    </div>
+    <h1 *ngIf="ifFavEmpty" class="ifFavEmpty">Your Favourit List is Empty. Please go to Player statistics and make fav.</h1>
+</div>

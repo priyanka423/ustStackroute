@@ -1,0 +1,34 @@
+.player-stat-main {
+    box-shadow: -3px -3px 7px #fffff3, 3px 3px 5px rgba(94, 104, 121, 288);
+    border-radius: 8px;
+    color: teal;
+    text-align: center;
+}
+
+.player-img-container {
+    text-align: center;
+}
+
+.player-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.else-see-msg {
+    text-align: center;
+}
+
+#search {
+    margin-top: 20px;
+    width: 300px;
+}
+
+.fav-icon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fa-heart {
+    color: red;
+}

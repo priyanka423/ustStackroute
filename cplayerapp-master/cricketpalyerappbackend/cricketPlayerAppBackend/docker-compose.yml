@@ -1,0 +1,54 @@
+version: '3.1'
+services:
+ authenticationservice:
+     image: authenticationserviceapi
+     build: AuthenticationService
+     ports:
+      - "8090:80"
+     depends_on:
+      - sqlserverservice
+     environment:
+      SQL_CONNECTION: "server=LAPTOP-MN09T5ET\\SQLEXPRESS2019;database=DockerAuthDb;User Id=sa;password=vikram@123"
+ userservice:
+     image: userserviceapi
+     build: UserAPI
+     ports:
+      - "8089:80"
+     depends_on:
+      - mongoservice
+     environment:
+      MONGO_CONNECTION: "mongodb://mongoservice:27017"    
+ favouriteservice:
+     image: favouriteserviceapi
+     build: favouriteservice
+     ports:
+      - "8086:80"
+     depends_on:
+      - mongoservice 
+     environment:
+      MONGO_CONNECTION: "mongodb://mongoservice:27017"
+ recommendservice:
+     image: recommendserviceapi
+     build: recommendservice
+     ports:
+      - "8087:80"
+     depends_on:
+      - mongoservice 
+     environment:
+      MONGO_CONNECTION: "mongodb://mongoservice:27017"    
+ sqlserverservice:
+     image: mcr.microsoft.com/mssql/server:2017-latest
+     ports: 
+      - "1433:1433"
+     environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "vikram@123"
+ mongoservice:
+     image: mongo
+     ports: 
+      - "27017:27017"      
+                  
+
+              
+
+     

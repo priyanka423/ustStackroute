@@ -1,0 +1,36 @@
+.dashboard-back-image {
+    height: 500px;
+    position: relative;
+    background-image: url('../../../images/wp4012091-india-national-cricket-team-wallpapers.jpg') !important;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.common-icon {
+    color: white;
+    font-size: 55px;
+}
+
+.card-body {
+    box-shadow: -3px -3px 7px #fffff3, 3px 3px 5px rgba(94, 104, 121, 288);
+    background-color: #dde1e7;
+    background-image: url('../../../images/cover_1567782979ball-cov.jpg') !important;
+    background-size: cover;
+    text-align: center;
+}
+
+.card-title {
+    margin-left: 15px;
+    color: yellow;
+}
+
+.card-title:hover {
+    text-decoration: none;
+    color: coral;
+    cursor: pointer;
+}
+
+.card-text {
+    color: white;
+}

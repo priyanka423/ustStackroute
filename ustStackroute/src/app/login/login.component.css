@@ -1,0 +1,45 @@
+.body-background {
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding-top: 10px;
+    background: url(../../../images/bg-cricket-image.jpg);
+    background-size: cover;
+    height: 80%;
+}
+
+.card {
+    background: none;
+}
+
+.login-div {
+    display: inline;
+}
+
+.inner-login-div {
+    box-shadow: 0px 5px 10px 5px gray;
+    border-radius: 15px;
+}
+
+.font-color {
+    color: #4be3cf;
+}
+
+.background-color {
+    background: #4be3cf !important;
+}
+
+.card-title h3 {
+    color: black;
+}
+
+.box-description {
+    padding: 20px;
+    box-shadow: 2px 3px 3px 2px gray;
+    background: rgba(0, 0, 0, 0.6);
+    color: #4be3cf;
+}
+
+.card-header {
+    border-radius: 15px 15px 0px 0px;
+}

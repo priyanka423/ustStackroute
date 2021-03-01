@@ -1,0 +1,46 @@
+<div class="body-background">
+    <div class="register-div col-lg-4">
+        <div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+        <div class=" display-inline">
+            <div class="inner-register-div ">
+                <div class="card-header background-color">
+                    <div class="card-title ">
+                        <h3>Register</h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form #registerForm='ngForm' (ngSubmit)='register(registerForm)'>
+                        <input type="email" name="UserId" id="email" #email='ngModel' ngModel class="form-control mb-3"
+                            placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+[a-z]{2,}$"
+                            title="email should contain @ and dot(.) Eg.,abc@gmail.com" size="30" required
+                            (keypress)="validateEmpty(registerForm)" (keyup)="validateEmpty(registerForm)">
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                            <div *ngIf="email.errors.required">
+                                Email is required.
+                            </div>
+                            <div *ngIf="email.errors.minlength">
+                                Email must be at least 5 characters long.
+                            </div>
+                        </div>
+                        <input type="password" name="Password" id="password" #password='ngModel' ngModel
+                            class="form-control mb-3" placeholder="Enter password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="must contain atleast one number and one uppercase and one special characters and lowercase letters"
+                            (keypress)="validateEmpty(registerForm)" (keyup)="validateEmpty(registerForm)">
+                        <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                            class="alert alert-danger">
+                            <div *ngIf="password.errors.required">
+                                password is required.
+                            </div>
+                            <div *ngIf="password.errors.minlength">
+                                password must be at least 4 characters long.
+                            </div>
+                        </div>
+                        <button class="btn btn-primary form-control" type="submit"
+                            [disabled]="buttonDisable">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

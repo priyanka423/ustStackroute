@@ -1,0 +1,18 @@
+.footer-container {
+    height: 74px;
+    display: grid;
+    place-items: center;
+    background: #c2185b;
+    color: white;
+}
+
+.footer-container ul li {
+    display: inline-block;
+}
+
+.footer-container ul li a {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-left: 5px;
+}

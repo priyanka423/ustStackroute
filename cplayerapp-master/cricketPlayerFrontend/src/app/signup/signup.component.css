@@ -1,0 +1,31 @@
+.body-background {
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    background: url(../../../images/bg-cricket-image.jpg);
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.inner-register-div {
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 5px gray;
+    border-radius: 15px;
+    padding: 0px 0px;
+}
+
+.font-color {
+    color: #4be3cf;
+}
+
+.background-color {
+    background: #4be3cf !important;
+}
+
+.card-title h3 {
+    color: black;
+}
+
+.card-header {
+    border-radius: 15px 15px 0px 0px;
+}

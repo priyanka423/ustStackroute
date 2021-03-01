@@ -1,0 +1,12 @@
+.h-logo {
+    position: absolute;
+    top:-0px;
+    height: 100px;  
+    z-index: 999; 
+}
+.navbar-nav{
+    margin-left: 100px;
+}
+nav{
+   background:  #c2185b !important
+}

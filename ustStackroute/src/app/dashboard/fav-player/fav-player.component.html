@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-3 col-lg-3 col-xs-12 mt-3">
+        <div *ngFor="let player of favPlayers" class='player-stat-main' (click)="showMoreStat(player.pid)"
+            (click)="scroll('.allstat')">
+            <h3>Player's Name: {{player.name}}</h3>
+            <h3>Player's pid: {{player.pid}}</h3>
+        </div>
+
+    </div>
+    <div class="col-md-9 col-lg-9 col-xs-12 allstat" *ngIf="playerStat!=null" #target>
+        <input type="search" name="search" id="search" placeholder="Please Enter Player's pid" class="form-control"
+            #player (keyup.enter)="showSearchStat(player.value)">
+        <div class="player-img-container">
+            <i class="fa {{heartClass}} pull-right fav-icon" (click)="makeItFav()"></i>
+            <figure>
+                <img src={{playerStat.imageURL}} class="player-img" />
+                <figcaption>
+                    <h1>{{playerStat.fullName}}</h1>
+                </figcaption>
+            </figure>
+        </div>
+        <table class="table table-striped table-dark">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Player Id</th>
+                    <td>{{playerStat.pid}}</td>
+                </tr>
+                <tr>
+                    <th>battingStyle</th>
+                    <td>{{playerStat.battingStyle}}</td>
+                </tr>
+                <tr>
+                    <th>bowlingStyle</th>
+                    <td>{{playerStat.bowlingStyle}}</td>
+                </tr>
+                <tr>
+                    <th>majorTeams</th>
+                    <td>{{playerStat.majorTeams}}</td>
+                </tr>
+                <tr>
+                    <th>currentAge</th>
+                    <td>{{playerStat.currentAge}}</td>
+                </tr>
+                <tr>
+                    <th>born</th>
+                    <td>{{playerStat.born}}</td>
+                </tr>
+                <tr>
+                    <th>name</th>
+                    <td>{{playerStat.name}}</td>
+                </tr>
+                <tr>
+                    <th>country</th>
+                    <td>{{playerStat.country}}</td>
+                </tr>
+                <tr>
+                    <th>country</th>
+                    <td>{{playerStat.country}}</td>
+                </tr>
+                <tr>
+                    <th>v</th>
+                    <td>{{playerStat.v}}</td>
+                </tr>
+                <tr>
+                    <th>data</th>
+                    <td>{{playerStat.data.batting}}</td>
+                </tr>
+                <tr>
+                    <th>fullName</th>
+                    <td>{{playerStat.fullName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="playerStat===null" class="else-see-msg">
+        <h1>Please Select the player from List to see the statistics</h1>
+        <input type="search" name="search" id="search" placeholder="Please Enter Player's pid" class="form-control"
+            #player (keyup.enter)="showSearchStat(player.value)">
+    </div>
+
+</div>

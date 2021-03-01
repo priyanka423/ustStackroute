@@ -1,0 +1,13 @@
+<div class="row main-diiv">
+          <div class="col-md-3 col-lg-3 col-xs-12 mt-3">
+                    <h1 class="fav-h1"> Recommendation for you.</h1>
+                    <ul *ngFor="let player of recommendationGlobalData" class='player-stat-main'>
+                              <li><i class="fa fa-heart trash-class pull-right"></i></li>
+                              <li> <img src="{{player.playerImage}}" class="player-img" /></li>
+                              <li class="player-id">Player's pid: {{player.playerId}}</li>
+                              <li>
+                                        <h2>{{player.playerName}}</h2>
+                              </li>
+                    </ul>
+          </div>
+</div>
